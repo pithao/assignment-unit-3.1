@@ -11,6 +11,9 @@ console.log('Animals are: ', animalArray);
 //    Be sure to console.log your array of foods to the console with
 //    a message, similar to the example above.
 
+let favoriteFoods = ['sushi', 'steak', 'pasta'];
+console.log('Favorite foods are: ', favoriteFoods);
+
 
 // Array.length: A property that tells you how many items are in a given array.
 console.log('--- 2. Length of an array ---');
@@ -22,6 +25,9 @@ console.log('Number of animals:', numberOfAnimals);
 // 2. TODO: Create a variable `numberOfFoods` and use the .length property
 //    to assign it the number value of how many items are inside `favoriteFoods`.
 //    Don't forget to console.log `numberOfFoods` to make sure your code worked!
+
+let numberOfFoods = favoriteFoods.length
+console.log('Number of favorite foods:', numberOfFoods);
 
 
 // Accessing array items
@@ -35,6 +41,8 @@ console.log('First animal is', firstAnimal);
 //      of the second item from the `animalArray`.
 //      Be sure to console.log this new variable to make sure your code
 //      worked as expected.
+let secondAnimal = animalArray[1];
+console.log('Second animal is', secondAnimal);
 
 
 // 3.b. TODO: Create a variable `lastAnimal` and assign it the value of
@@ -43,13 +51,21 @@ console.log('First animal is', firstAnimal);
 //      sure that your code does what you want. (Never trust your code until
 //      you have proof that it works!)
 
+let lastAnimal = animalArray[3];
+console.log('Last animal is', lastAnimal);
+
+
+
 // 3.c. (STRETCH) TODO: Refactor 3.b to use the `animalArray` variable's .length 
 //       property, rather than the exact (hardcoded) index number of the last item.
+
+let lastItem = animalArray[animalArray.length - 1];
+console.log('Last animal is', lastItem);
 
 
 
 // Adding & Removing Array Items
-console.log('--- 4. Adding and removing array items ---');
+// console.log('--- 4. Adding and removing array items ---');
 
 // Example: Add an animal to the end of an array using the Array.push method.
 let animalToPush = 'penguin';
@@ -60,6 +76,9 @@ console.log('Added an animal to end,', animalArray);
 //      a dessert that you love.
 //      Similar to above, add the `dessert` to the end of your `favoriteFoods`
 //      array. (How can you be 100% certain this worked? 🤔)
+let dessertToPush = 'icecream'
+favoriteFoods.push(dessertToPush);
+console.log('Added a dessert to end,', favoriteFoods);
 
 
 // Example: Add to the beginning of an array using the Array.unshift method.
@@ -70,6 +89,9 @@ console.log(`Added an animal to beginning: ${animalArray}`);
 // 4.b. TODO: Create a variable `entree` and assign it a string value of
 //      an entree that you enjoy.
 //      Add the `entree` to the beginning of your `favoriteFoods` array.
+let entree = 'potatoes'
+favoriteFoods.unshift(entree);
+console.log(`Added an entree to beginning: ${favoriteFoods}`);
 
 
 // Example: Remove the last animal by using the Array.pop method.
@@ -79,6 +101,7 @@ console.log('The animals are now', animalArray);
 
 // NOTE: Use the `colors` array for 4.c and 4.d.
 let colors = ['orange', 'yellow', 'green', 'teal'];
+console.log('The colors are:', colors);
 
 // 4.c. TODO: The last value inside the `colors` array was added by mistake.
 //      Remove it from the array and store it inside a new variable called
@@ -86,6 +109,15 @@ let colors = ['orange', 'yellow', 'green', 'teal'];
 //      Don't forget! Use console.log to verify that the `colors`
 //      array only contains three items now, AND to verify that `lastColor`
 //      contains the value "teal".)
+
+let removeColor = colors.pop();
+console.log('Removed the last color', removeColor);
+console.log(colors);
+
+let lastColor = ['pink, green, blue']
+let colorToPush = 'teal'
+lastColor.push(colorToPush);
+console.log('Added to new color array,', lastColor);
 
 
 // Example: Remove the first animal using the Array.shift method.
@@ -97,7 +129,9 @@ console.log('The animals are now', animalArray);
 //      inside a new variable called `firstColor`.
 //      To verify that your code worked, console.log `firstColor`!  
 
-
+removedColor = colors.shift();
+console.log('Removed the first color', removedColor);
+console.log('The colors are now', colors);
 
 
 // STRETCH GOALS:
